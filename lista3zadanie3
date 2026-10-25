@@ -1,0 +1,14 @@
+# LISTA 3 ZADANIE 3
+
+def nwd2(a, b):
+    while b != 0:
+        tmp = a % b
+        a = b
+        b = tmp
+    return a
+
+def nwd(lista):
+    nwd = lista[0]                       
+    for i in range(1, len(lista)):
+        nwd = nwd2(nwd, lista[i])
+    return nwd
