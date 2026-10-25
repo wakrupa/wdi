@@ -1,0 +1,18 @@
+# LISTA 3 ZADANIE 2
+
+def nwd(a, b): # Ta funkcja to algorytm Euklidesa.
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def nww(a, b):
+    nwd = nwd(a, b)
+    return a * b // nwd
+
+# Złożność czaoswa to O(log(min(a, b))). Złożność pamięciowa to O(1).
+
+def ulamek_nieskracalny(a, b):
+    nwd = nwd(a, b)
+    return a // nwd, b // nwd
+
+# Złożność czaoswa to O(log(min(a, b))). Złożność pamięciowa to O(1).
