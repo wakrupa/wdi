@@ -8,7 +8,19 @@ def nwd2(a, b):
     return a
 
 def nwd(lista):
-    nwd = lista[0]                       
+    d = lista[0]                       
     for i in range(1, len(lista)):
-        nwd = nwd2(nwd, lista[i])
-    return nwd
+        d = nwd2(d, lista[i])
+    return d
+
+# Uzasadnienie poprawności programu:
+# Po każdym kroku pętli zmienna d jest równa NWD wszystkich dotychczas przejrzanych liczb.
+# Na początku d = a_1 (to jest NWD jednej liczby, czyli ona sama).
+# Załóżmy, że po i-1 krokach d równa się NWD liczb a_1, a_2, ..., a_i-1.
+# Każda liczba dzieląca wszystkie a_1, a_2, ..., a_i-1 dzieli też ich NWD, czyli d.
+# Zatem wspólny dzielnik liczb a_1, a_2, ..., a_i to dokładnie wspólny dzielnik d oraz a_i.
+# Dlatego NWD(d, a_i) jest NWD liczb a_1, a_2, ..., a_i.
+# Po ostatnim kroku d jest NWD wszystkich liczb z listy.
+
+# Złożność czasowa:
+# 
