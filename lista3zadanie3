@@ -21,4 +21,6 @@ def nwd(lista):
 # Po ostatnim kroku d jest NWD wszystkich liczb z listy.
 
 # Złożność czasowa:
-# 
+# Pętla for wykona się n-1 razy (w zaokrągleniu wykona się n razy).
+# W każdym obrocie pętli for liczymy NWD dwóch liczb, co kosztuje najwyżej log(max(a_1, a_2, ..., a_n)) kroków.
+# Zatem złożność czasowa to O(n*log(max(a_1, a_2, ..., a_n))).
