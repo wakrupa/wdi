@@ -1,7 +1,7 @@
 # LISTA 3 ZADANIE 5
 
 # Specyfikacja:
-# Wejście: liczba n.
+# Wejście: liczba naturalna n.
 # Wyjście: True, jeżeli zapis binarny n czyta się tak samo od przodu i od tyłu, w. p. p. False.
 
 def palindrom_binarny(n):
