@@ -1,0 +1,23 @@
+# LISTA 3 ZADANIE 7
+
+# Specyfikacja:
+# Wejście: liczba naturalna dodatnia n.
+# Wyjście: liczba całkowita k, oznaczająca ilość unikalnych cyfr w zapisie liczby n.
+
+def ile_roznych_cyfr(n):
+    unikalna = [False] * 10          # Tworzymy listę 10 pól. Pole numer 0 odpowiada cyfrze 0, pole numer 1 cyfrze 1, i tak do pola 9.
+    while n > 0:
+        ostatnia = n % 10          # Sprawdzamy ostatnią cyfrę aktualnej liczby n (reszta z dzielenia przez 10 daje nam ostatnią cyfrę liczby).
+        unikalna[ostatnia] = True          # Odhaczamy ostatnią cyfrę aktualnej liczby n. Jeżeli ostatnia = 2, to pole numer 2 zamieni się w True. Jeśli ta sama cyfra pojawi się drugi raz, pole po prostu pozostanie True.
+        n //= 10          # Odcinamy ostatnią cyfrę z aktualnej liczby n.
+    k = 0
+    for i in range(10):
+        if unikalna[i]:          # if unikalna[i] to skrót od if unikalna[i] == True, czyli instrukcja k += 1 wykona się jedynie wtedy, gdy wartość unikalna[i] będzie True.
+            k += 1
+    return k
+
+# Złożność czasowa:
+# Pętla while w każdym obrocie odcina jedną cyfrę, czyli wykona się tyle razy, ile n ma cyfr.
+# Pętla for zawsze wykona 10 obrotów.
+# Całkowita złożność czasowa to zatem O(log(n)).
+# Złożność pamięciowa to O(1).
