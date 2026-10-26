@@ -1,0 +1,17 @@
+# LISTA 3 ZADANIE 5
+
+# Specyfikacja:
+# Wejście: liczba n.
+# Wyjście: True, jeżeli zapis binarny n czyta się tak samo od przodu i od tyłu, w. p. p. False.
+
+def palindrom_binarny(n):
+    m = n
+    odwrocona = 0
+    while m > 0:
+        cyfra = m % 2          # Wyznaczamy ostatnią cyfrę liczby m w zapisie binarnym.
+        odwrocona = odwrocona * 2 + cyfra
+        m //= 2
+    return odwrocona == n
+
+# Złożoność czasowa to O(log(n)).
+# Złożoność pamięciowa to O(1).
