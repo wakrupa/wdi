@@ -1,0 +1,17 @@
+# LISTA 3 ZADANIE 6
+
+# Specyfikacja:
+# Wejście: liczba naturalna n oraz liczba naturalna k > 1.
+# Wyjście: True, jeżeli zapis liczby n w systemie o podstawie k czyta się tak samo od przodu i od tyłu, w. p. p. False.
+
+def palindrom_k_narny(n, k):
+    m = n
+    odwrocona = 0
+    while m > 0:
+        cyfra = m % k          # Wyznaczamy ostatnią cyfrę liczby m w zapisie k.
+        odwrocona = odwrocona * k + cyfra          # Dopisujemy cyfrę na koniec odwróconej.
+        m //= k
+    return odwrocona == n
+
+# Złożoność czasowa to O(log(n)).
+# Złożoność pamięciowa to O(1).
