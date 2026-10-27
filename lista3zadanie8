@@ -1,0 +1,25 @@
+# LISTA 3 ZADANIE 8
+
+# Specyfikacja:
+# Wejście: liczby całkowite dodatnie n oraz m.
+# Wyjście: True, jeśli każda cyfra w liczbie n powtarza się tyle samo razy, co w liczbie m, w. p. p. False.
+
+def policz_cyfry(x):
+    lista = [0] * 10
+    while x > 0:
+        ostatnia_cyfra = x % 10
+        lista[ostatnia_cyfra] = lista[ostatnia_cyfra] + 1
+        x //= 10
+    return lista
+
+def czy_cyfry_podobne(n, m):
+    lista_n = policz_cyfry(n)
+    lista_m = policz_cyfry(m)
+    i = 0
+    while i < 10:
+        if lista_n[i] != lista_m[i]:
+            return False
+        i += 1
+    return True
+
+# Złożność czasowa: O(log(n) + log(m)). Złożność pamięciowa: O(1).
