@@ -1,0 +1,10 @@
+# LISTA 4 ZADANIE 3
+
+def reprezentacja_silniowa(n):
+    cyfry = []
+    d = 2 # d to aktualny dzielnik. Zaczynamy od 2, bo s_1 ma wynosić 0 lub 1, a to właśnie da reszta z dzielenia przez 2.
+    while n > 0:
+        cyfry.append(n % d) 
+        n //= d
+        d += 1
+    return cyfry[::-1]
