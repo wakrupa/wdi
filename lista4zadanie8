@@ -1,0 +1,9 @@
+# LISTA 4 ZADANIE 8
+
+def najmniejsze_k(n, m):
+    k = 0
+    potega = 1
+    while potega < m:
+        potega *= n
+        k += 1
+    return k
