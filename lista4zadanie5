@@ -1,0 +1,14 @@
+# LISTA 4 ZADANIE 5
+
+def G(n):
+    if n <= 2:
+        return 1
+    a = 1
+    b = 1
+    c = 1
+    for i in range(3, n + 1):
+        nowa_liczba = a + b + c
+        c = b
+        b = a
+        a = nowa_liczba
+    return a
