@@ -7,3 +7,5 @@ def najmniejsze_k(n, m):
         potega *= n
         k += 1
     return k
+
+# Złożoność czasowa to O(k). Złożoność pamięciowa to O(1).
